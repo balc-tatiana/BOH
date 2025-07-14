@@ -1,0 +1,143 @@
+/* LoginRegister.css */
+.content {
+  background-color: #fdf5e6; /* Fundal crem */
+  position: relative;
+  overflow: hidden;
+  border-radius: 40px;
+  padding: 30px;
+  max-width: 1000px;
+  min-height: 600px;
+  margin: 50px auto;
+  display: flex;
+}
+
+.content button {
+  background-color: #536b1a; /* Verde măsliniu pentru butoane */
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.content button:hover {
+  background-color: #879958; /* Verde mai deschis la hover */
+}
+
+.right-box {
+  padding: 40px 30px 40px 40px;
+}
+
+.col-md-6 {
+  transition: all 0.6s ease-in-out;
+  width: 50%;
+  padding: 20px;
+}
+
+/* Switch Panel Styles */
+.switch-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  z-index: 1000;
+}
+
+.switch {
+  background: linear-gradient(to right, #ffe099, #ffad55, #b04a47); /* Gradient ajustat cu roșu-maroniu */
+  height: 100%;
+  width: 200%;
+  position: relative;
+  left: -100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.switch-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  color: white;
+  transition: all 0.6s ease-in-out;
+}
+
+.switch-left {
+  transform: translateX(0);
+  left: 0;
+}
+
+.switch-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+/* Active States */
+.content.active .switch-content {
+  transform: translateX(-100%);
+}
+
+.content.active .switch {
+  transform: translateX(50%);
+}
+
+.content.active .switch-left {
+  transform: translateX(0);
+}
+
+.content.active .switch-right {
+  transform: translateX(200%);
+}
+
+/* Form Transitions */
+.content.active .col-md-6:first-child {
+  transform: translateX(0%);
+}
+
+.content.active .col-md-6:last-child {
+  transform: translateX(-100%);
+}
+
+/* Additional Styles */
+.header-text h1,
+.forgot a {
+  color: #92564e; /* Roșu-maroniu pentru text */
+}
+
+.input-group input {
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #536b1a; /* Verde măsliniu pentru focus */
+  box-shadow: 0 0 0 0.2rem rgba(83, 107, 26, 0.25); /* Umbră verde măsliniu */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 770px) {
+  .content {
+    min-height: 500px;
+    margin: 20px;
+    flex-direction: column;
+  }
+  
+  .switch-content {
+    display: none;
+  }
+  
+  .col-md-6 {
+    width: 100%;
+  }
+}

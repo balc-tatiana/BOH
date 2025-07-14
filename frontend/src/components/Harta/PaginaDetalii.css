@@ -1,0 +1,161 @@
+.pagina-detalii {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .nume-eveniment {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .organizator-localitate {
+    display: flex;
+    flex-direction: column; 
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.organizator {
+    font-weight: bold; 
+}
+
+.localitate {
+    font-style: italic; 
+    color: #555; 
+}
+  
+  .info-box {
+    background-color:  #536b1a;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .info-box h2 {
+    margin-top: 0;
+  }
+  
+  .info-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+  
+  .descriere-eveniment {
+    margin-bottom: 20px;
+  }
+  
+  .galerie-foto {
+    background-color: #536b1a;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .poze-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  .poze-grid img {
+    width: 100%; /* Imaginea ocupă întreaga lățime a containerului */
+    height: auto;
+    border: 2px solid #879958; /* Chenar pentru imagine */
+    border-radius: 5px; /* Colțuri rotunjite */
+    object-fit: cover; /* Asigură păstrarea proporțiilor imaginii */
+    padding: 5px; /* Spațiu între imagine și chenar */
+    background-color:  #879958; /* Fundal alb pentru chenar */
+}
+
+  .contact {
+    margin-top: 20px;
+  }
+  
+  .contact a {
+    color: inherit; /* Moștenește culoarea textului părintelui */
+    text-decoration: none; /* Elimină sublinierea */
+  }
+  
+  .contact a:hover {
+    color: #87261B; /* Culoare personalizată la hover */
+    text-decoration: underline; /* Opțional: adaugă subliniere la hover */
+  }
+  
+  .poze-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* pătrat pentru uniformitate */
+    background-color:  #879958; /* cadran colorat */
+    border: 4px solid #879958; /* rama */
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* taie dacă trebuie, dar păstrează uniformitate */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .image-wrapper img:hover {
+    transform: scale(1.05);
+  }
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 5px;
+  }
+  
+  .tag {
+    background-color: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    color: #444;
+  }
+
+.heart-button {
+  padding: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 48px; /* Dimensiunea inimii */
+  color: #ccc; /* Culoarea inimii inactive */
+  transition: all 0.3s ease; /* Tranziție lină pentru toate proprietățile */
+}
+
+.heart-button.favorite {
+  color: red; /* Culoare roșie pentru inimile favorite */
+}
+
+.heart-button:hover {
+  color: #ff6666; /* Culoare roșu deschis la hover */
+  transform: scale(1.3); /* Mărește inima la hover */
+  filter: drop-shadow(0 0 10px rgba(255, 102, 102, 0.8)); /* Adaugă o strălucire */
+}
+
+.rounded-icon {
+  border-radius: 50%; /* Face imaginea rotundă */
+}
+
+.border-icon {
+  border: 2px solid #ccc; /* Adaugă un chenar */
+  border-radius: 50%; /* Face imaginea rotundă */
+}

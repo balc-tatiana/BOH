@@ -1,0 +1,47 @@
+/*for all the HTML elements */
+/* *{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Popins',sans-serif;
+} */
+
+.container{
+  width:10%;
+  min-height: 1080px;
+  background: rgb(196, 196, 196);
+  
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+  background-color:  #e5ded2; /* Light background color */
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.photo-container {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+  overflow: hidden;
+}
+
+.photo-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-height: 150px;
+  object-fit: cover;
+}

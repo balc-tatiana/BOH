@@ -1,0 +1,22 @@
+.card {
+    width: 20rem;
+    margin: 20px;
+  }
+  
+  .overflow {
+    overflow: hidden;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+
+    /* Add smooth transition for hover effects */
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+/* Hover effect - image zooms in when hovered */
+.card-img-top:hover {
+    transform: scale(1.2);
+}

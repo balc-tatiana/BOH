@@ -1,0 +1,115 @@
+/* EventCard.module.css */
+.events_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Cardurile vor avea o lățime minimă de 280px */
+    gap: 16px; /* Spațiu între carduri */
+    padding: 16px; /* Spațiu în jurul grilei */
+    justify-content: center; /* Centrează grila în container */
+}
+
+.event_card {
+    height: auto; /* Permite cardurilor să aibă înălțime dinamică */
+    max-width: 300px; /* Lățime maximă pentru carduri */
+    width: 100%; /* Cardurile vor ocupa lățimea coloanei */
+    background-color: #FFFFFF;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Image container */
+.event_image_card {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 250px; /* Mărește înălțimea de la 200px la 250px */
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Adaugă tranziție pentru efectul de hover */
+}
+
+/* Content wrapper to group text elements */
+.content_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Small gap between text elements */
+}
+
+.event_title_card {
+    font-size: 18px; /* Slightly reduced */
+    font-weight: bold;
+    color: #333;
+    margin: 0; /* Remove default margins */
+}
+
+.event_location_card {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.event_date_card {
+    display: flex;
+    font-style: italic;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #382d2c;
+    margin: 0;
+}
+
+.event_details_card {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 4px;
+}
+
+.event_details_card p {
+    margin: 0; /* Elimină marginile implicite ale paragrafelor */
+    padding: 2px 0; /* Adaugă un spațiu mic între linii dacă este necesar */
+}
+
+/* Tag container */
+.event_type_card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 4px 0;
+}
+
+.type_tag {
+    background-color: #c4a9de;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #666666;
+}
+
+/* Button container */
+.button_container {
+    margin-top: auto; /* Push button to bottom */
+}
+
+.button_details {
+    width: 100%;
+    padding: 8px;
+    background-color: #87261B;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button_details:hover {
+    background-color: #a62d20;
+}
+
+/* Păstrează efectele existente pentru card */
+.event_card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
