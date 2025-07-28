@@ -17,7 +17,7 @@ const FiltreActivitati = ({ onFilterChange }) => {
    { id: 'robotica', label: 'Robotics' },
     { id: 'ecologie', label: 'Ecology' },
     { id: 'tehnologie', label: 'Technology' },
-    { id: 'gratuit', label: 'Free' }, // Înlocuit 'gratis' cu 'gratuit'
+    { id: 'gratuit', label: 'Free' }, 
     { id: 'contracost', label: 'Paid' },
     { id: 'online', label: 'Online' },
     { id: 'fizic', label: 'Physical' }

@@ -4,7 +4,7 @@ use boh;
 show tables;
 CREATE TABLE activities (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    activity_type VARCHAR(50),
+    activity_type VARCHAR(100),
     activity_cost VARCHAR(50),
     description TEXT,
     activity_city VARCHAR(50),
@@ -34,7 +34,7 @@ CREATE TABLE users (
     user_phonenumber VARCHAR(20),  -- Noua coloană pentru numărul de telefon
     user_type VARCHAR(50)          -- Noua coloană pentru tipul utilizatorului
 );
-
+select * from users;
 INSERT INTO activities (
     activity_type,
     description,
@@ -164,7 +164,7 @@ Vino să explorezi misterul, să porți o mască și să contribui la un viitor 
      'NU'
 ),
 (
-    'Cursuri ',
+    'Cursuri',
      'Gratuit',
     'EduMate este o echipă de pasionaţi de matematică, formată din olimpici și profesori dedicaţi, gata să ajute elevii de clasa a VIII-a să obţină o notă mare la Evaluarea Națională!
 Cu experiență în predare și competiții, echipa noastră își dorește să facă matematica mai accesibilă și să oferim suportul de care este nevoie pentru succes!
@@ -188,7 +188,7 @@ EduMate - proiect marca ProTv și School of Health',
     'https://docs.google.com/forms/d/e/1FAIpQLSe4hCJl0A5nIUXAsHbCxT8RBWaRidt5Tr1HtV5hmjfRguV8sg/viewform?fbclid=PAQ0xDSwJ5kBNleHRuA2FlbQIxMAABpwdrD8-b9zUFqiPxplMqXzXAUnRpHY3IDcY_MMxWUOk8LN-Z31dtfQqJvGHK_aem_v51ElL4bc5NfXhfrBlUA1Q'
 ),
 (
-    'voluntariat;ecologie ',
+    'voluntariat;ecologie',
 	'Gratuit',
     ' 🌍Rețeaua Liceenilor pentru Mediu, în parteneriat cu Banca de Alimente și Luna Cleaning, te invită la Green Day - Ecologizare și Picnic, o experiență hands-on pentru amatorii de experiențe faine! 
 Trebuie doar să aduci  un strop de chef de muncă și mult drag de pădure, iar noi te așteptăm cu toate cele necesare: mănuși, saci de gunoi. Apă te rugăm să-ți aduci de acasă, în recipient reutilizabil. Noi asigurăm refill-ul!
@@ -222,7 +222,7 @@ Plecare: 8:45 din stația de autobuz Posada (autobuzul pleacă la ora 9:00) http
     'https://docs.google.com/forms/d/e/1FAIpQLSf4BaEsMq2hwMwAfq1Sxp-5C7FMI4uf0IDfBaf2i5gtBl4Ixw/viewform'
 ),
 (
-    'Dezbateri; Educație',
+    'Dezbateri;Educație',
 	'Gratuit',
     'Proiectul național Simularea Parlamentului European (SimPE),  se construiește în jurul procesului decizional de la nivelul instituției co-legislative a Uniunii Europene, simulând modul de desfășurare a negocierilor și dezbaterilor din cadrul acesteia, respectiv modul de organizare a ședințelor grupurilor politice, comisiilor și adunărilor plenare. 
      Grup țintă: tineri între 18-35 de ani din toată țara',
@@ -268,7 +268,7 @@ Plecare: 8:45 din stația de autobuz Posada (autobuzul pleacă la ora 9:00) http
     'http://bit.ly/3EFcHhb'
 ),
 (
-    'Arta;Cultura;expoziție de artă;vernisaj artistic',
+    'Arta;Cultura;expoziție de artă',
 	'Gratuit',
     'Data: 23-25 mai 
 Ora începerii activităților: vineri (23): 14:00-15:00, sâmbătă (24) și duminică (25): aprox 12:00
@@ -280,7 +280,7 @@ Pentru noi, Interact Transilvania, Tête-à-Tête este mai mult decât atât. Es
     '2025-05-23 14:00:00',
     '2025-05-25 20:00:00',
     '2025-08-26 00:00:00',
-    'pozaG_1.png',
+    'pozaG_1.png;pozaG_2.jpeg;pozaG_3.jpeg',
 	16,
     'Tête-à-Tête 3',
     '010101',
@@ -302,7 +302,7 @@ Pentru noi, Interact Transilvania, Tête-à-Tête este mai mult decât atât. Es
     '2025-05-09 17:00:00',
     '2025-05-09 19:00:00',
     '2025-08-26 00:00:00',
-    'pozaH_1.png;pozaH_2.png',
+    'pozaH_1.jpeg;pozaH_2.jpeg',
 	12,
     'Medlab-workshop branule și injecții',
     '010101',
@@ -413,14 +413,14 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'concurs;voluntariat;tehnologie,STEM',
+    'concurs;voluntariat;tehnologie;STEM',
     'Gratuit',
     'Technovation Girls este un program global care încurajează fetele să dezvolte soluții tehnologice pentru problemele din comunitatea lor. Participantele, cu vârste între 14 și 18 ani, lucrează în echipe pentru a crea aplicații mobile și planuri de afaceri, beneficiind de mentorat și resurse educaționale. Programul se desfășoară în perioada octombrie 2024 – mai 2025 și este susținut de ADFABER în România.',
     'București',
     '2024-10-01 00:00:00',
     '2025-05-31 23:59:59',
     '2025-06-15 00:00:00',
-    'pozaL_1.png;pozaL_2.jpg;pozaL_jpeg',
+    'pozaL_1.png;pozaL_2.jpg;poza_L.jpeg',
     8,
     'Technovation Girls',
     '011241',
@@ -442,7 +442,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     '2024-11-01 00:00:00',
     '2025-06-30 23:59:59',
     '2025-07-15 00:00:00',
-    'pozaM_1.png;',
+    'pozaM_1.png',
     14,
     'Breaking Barriers',
     '000000',
@@ -454,7 +454,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'hello@adfaber.org',
     'adfaber.org',
     'https://adfaber.org/',
-    'NU'
+    'https://adfaber.org/en/breaking-barriers/'
 ),
 (
     'expoziție',
@@ -486,7 +486,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     '2025-02-19 10:00:00',
     '2025-03-08 17:00:00',
     '2025-03-09 00:00:00',
-    'pozaO.1_jpeg;pozaO.2_jpeg;pozaO.3_jpeg',
+    'pozaO_1.jpeg;pozaO_2.jpeg;pozaO_3.jpeg',
     5,
     'Ateliere DICE dedicate Mărțișorului',
     '700259',
@@ -501,7 +501,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'spectacol',
+    'spectacol;contracost;gratuit;fizic',
     '50 lei',
     'Spectacolul „Chirița în provinție” rămâne inepuizabila capodoperă dramatică românească, prezentată la Teatrul Național „Vasile Alecsandri” din Iași.',
     'Iași',
@@ -523,7 +523,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'festival',
+    'festival;gratuit;fizic',
     'Gratuit',
     'Ediția a 13-a a JAZZx aduce în Timișoara inspirația și talentul artiștilor români și străini, punând în valoare muzica de calitate și conexiunile autentice.',
     'Timișoara',
@@ -545,14 +545,14 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'festival',
+    'festival;gratuit;fizic',
     'Gratuit',
     'Ceau, Cinema! revine cu ediția a 12-a, aducând în Timișoara cele mai captivante filme europene și românești, întâlniri cu cineaști, ateliere și evenimente speciale.',
     'Timișoara',
     '2025-07-16 10:00:00',
     '2025-07-20 22:00:00',
     '2025-07-21 00:00:00',
-    'pozaS.1_jpeg;pozaS.2_jpeg;pozaS.3_jpeg',
+    'pozaS_1.jpeg;pozaS_2.jpeg;pozaS_3.jpeg',
     0,
     'Ceau, Cinema! 2025',
     '300085',
@@ -567,14 +567,14 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'atelier',
+    'atelier;tabara;gratuit;fizic',
     'Gratuit',
     'Școala de vară „Cadre și Forme în Dansul Contemporan” conectează scena locală timișoreană cu tendințele internaționale, aducând dansul mai aproape de oameni.',
     'Timișoara',
     '2025-07-07 10:00:00',
     '2025-07-16 22:00:00',
     '2025-07-17 00:00:00',
-    'pozaT_1.jpeg',
+    'pozaT_2.jpeg;pozaT_3.jpeg',
     16,
     'Cadre și Forme în Dansul Contemporan',
     '300085',
@@ -587,11 +587,33 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'unfoldmotion.ro',
     'https://unfoldmotion.ro/',
     'NU'
+),
+(
+    'robotica;atelier;social;educational;technologie;gratuit;fizic',
+    'Gratuit',
+    '🚀 Pregătiți-vă să fiți uimiți! 🤖 Echipa de robotică Phoenix vă invită la Identicom Event pentru a vedea robotul nostru uimitor în acțiune! ⚙️ Vino să descoperi lumea fascinantă a tehnologiei, să înțelegi cum funcționează un robot de competiție și să interacționezi cu echipa noastră pasionată. Nu ratați ocazia de a vedea inovația în direct! ✨ Vă așteptăm cu entuziasm! 🎉',
+    'Cluj Innovation Park',
+    '2025-05-20 09:00:00',
+    '2025-05-22 17:00:00',
+    '2025-07-17 00:00:00',
+    'pozaU_1.png',
+    15,
+    'Identicom Event',
+    '300085',
+    46.821083,
+    23.579194,
+    20,
+    'Phoenix',
+    '0770892372',
+    'patriciaporumb10@gmail.com',
+    'phoenix.ro026',
+    'https://www.instagram.com/phoenix.ro026?igsh=MTFjYmY1cjN5bmRzYQ==',
+    'NU'
 );
 
 
-
-
+ALTER TABLE users
+ADD COLUMN favorite_activities TEXT;
 select * from activities;
 SHOW WARNINGS;
 truncate activities;

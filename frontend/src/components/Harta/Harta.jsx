@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { useCallback, useMemo } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import './Harta.css'; // Asigură-te că ai un fișier CSS pentru stilizare
+import './Harta.css';
 import FiltreActivitati from '../FiltreActivitati/FiltreActivitati';
 import PozaIcon from '../../assets/images/PozaIcon.png'; // Asigură-te că calea este corectă
 
@@ -111,6 +112,7 @@ const Harta = () => {
       }
     });
   }, [ filteredActivities]);
+  /*
   const handleFilterChange = async (selectedFilters) => {
     if (selectedFilters.length === 0) {
         setFilteredActivities(activities); // Dacă nu sunt selectate filtre, returnează toate activitățile
@@ -155,16 +157,59 @@ const Harta = () => {
             filteredData = filteredData.filter((item) =>
                 data.some((filteredItem) => filteredItem.id === item.id)
             );
-        
-      
-}
+          }
 
         setFilteredActivities(filteredData);
     } catch (error) {
         console.error('Error filtering activities:', error);
     }
 };
+*/
+const handleFilterChange = useCallback(async (selectedFilters) => {
+  try {
+    let filteredData = [...activities];
 
+    // Filter by cost
+    if (selectedFilters.includes('gratuit')) {
+      filteredData = filteredData.filter(activity => activity.activity_cost?.toLowerCase() === 'gratuit');
+    }
+    if (selectedFilters.includes('contracost')) {
+      filteredData = filteredData.filter(activity => activity.activity_cost?.toLowerCase() !== 'gratuit');
+    }
+
+    // Filter by location
+    if (selectedFilters.includes('online')) {
+      filteredData = filteredData.filter(activity => activity.activity_city?.toLowerCase() === 'online');
+    }
+    if (selectedFilters.includes('fizic')) {
+      filteredData = filteredData.filter(activity => activity.activity_city?.toLowerCase() !== 'online');
+    }
+
+    // Filter by other types
+    const otherFilters = selectedFilters.filter(
+      f => !['gratuit', 'contracost', 'online', 'fizic'].includes(f)
+    );
+
+    if (otherFilters.length > 0) {
+      const response = await fetch(
+        `http://localhost:3001/api/activities/filter?types=${otherFilters.join(',')}`,
+        { credentials: 'include' }
+      );
+
+      if (!response.ok) throw new Error('Filtering failed');
+
+      const data = await response.json();
+      filteredData = filteredData.filter(item =>
+        data.some(filteredItem => filteredItem.id === item.id)
+      );
+    }
+
+    setFilteredActivities(filteredData);
+  } catch (error) {
+    setError('Error filtering activities: ' + error.message);
+    console.error('Error:', error);
+  }
+}, [activities]);
   return (
     <div style={{ width: '100%', marginBottom: '40px' }}> {/* Container pentru harta și elementele asociate */}
       <h2 style={{ margin: '20px 0 10px 0' }}>Activities Map</h2>

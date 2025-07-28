@@ -133,7 +133,7 @@ INSERT INTO activities (
     activity_form 
 ) VALUES 
 (
-    'eveniment caritabil;cultural;artistic',
+    'eveniment caritabil;cultural;artistic,contracost;fizic',
     '35 lei',
     '  🎩✨ Intri în universul enigmatic al lui Magritte? 🌙🕊️
 
@@ -164,7 +164,7 @@ Vino să explorezi misterul, să porți o mască și să contribui la un viitor 
      'NU'
 ),
 (
-    'Cursuri ',
+    'Cursuri;gratuit',
      'Gratuit',
     'EduMate este o echipă de pasionaţi de matematică, formată din olimpici și profesori dedicaţi, gata să ajute elevii de clasa a VIII-a să obţină o notă mare la Evaluarea Națională!
 Cu experiență în predare și competiții, echipa noastră își dorește să facă matematica mai accesibilă și să oferim suportul de care este nevoie pentru succes!
@@ -188,7 +188,7 @@ EduMate - proiect marca ProTv și School of Health',
     'https://docs.google.com/forms/d/e/1FAIpQLSe4hCJl0A5nIUXAsHbCxT8RBWaRidt5Tr1HtV5hmjfRguV8sg/viewform?fbclid=PAQ0xDSwJ5kBNleHRuA2FlbQIxMAABpwdrD8-b9zUFqiPxplMqXzXAUnRpHY3IDcY_MMxWUOk8LN-Z31dtfQqJvGHK_aem_v51ElL4bc5NfXhfrBlUA1Q'
 ),
 (
-    'voluntariat;ecologie ',
+    'voluntariat;ecologie;gratuit;fizic',
 	'Gratuit',
     ' 🌍Rețeaua Liceenilor pentru Mediu, în parteneriat cu Banca de Alimente și Luna Cleaning, te invită la Green Day - Ecologizare și Picnic, o experiență hands-on pentru amatorii de experiențe faine! 
 Trebuie doar să aduci  un strop de chef de muncă și mult drag de pădure, iar noi te așteptăm cu toate cele necesare: mănuși, saci de gunoi. Apă te rugăm să-ți aduci de acasă, în recipient reutilizabil. Noi asigurăm refill-ul!
@@ -222,7 +222,7 @@ Plecare: 8:45 din stația de autobuz Posada (autobuzul pleacă la ora 9:00) http
     'https://docs.google.com/forms/d/e/1FAIpQLSf4BaEsMq2hwMwAfq1Sxp-5C7FMI4uf0IDfBaf2i5gtBl4Ixw/viewform'
 ),
 (
-    'Dezbateri; Educație',
+    'Dezbateri;Educație;gratuit;fizic',
 	'Gratuit',
     'Proiectul național Simularea Parlamentului European (SimPE),  se construiește în jurul procesului decizional de la nivelul instituției co-legislative a Uniunii Europene, simulând modul de desfășurare a negocierilor și dezbaterilor din cadrul acesteia, respectiv modul de organizare a ședințelor grupurilor politice, comisiilor și adunărilor plenare. 
      Grup țintă: tineri între 18-35 de ani din toată țara',
@@ -245,7 +245,7 @@ Plecare: 8:45 din stația de autobuz Posada (autobuzul pleacă la ora 9:00) http
     'NU'
 ),
 (
-    'Muzica;Dans;Psihologie',
+    'Muzica;Dans;Psihologie;gratuit;fizic',
 	'Gratuit',
     '🎶 Workshopul „Terapie prin muzică și dans” este un spațiu unde muzica și mișcarea se întâlnesc pentru a-ți elibera emoțiile și a te ghida pe drumul auto-descoperirii. 🌱
 💃 Nu este vorba de coregrafii sau pași calculați. Este despre împărtășirea trăirilor tale prin fiecare mișcare, despre cum ritmul și sunetul te ajută să te conectezi cu tine însuți.',
@@ -268,7 +268,7 @@ Plecare: 8:45 din stația de autobuz Posada (autobuzul pleacă la ora 9:00) http
     'http://bit.ly/3EFcHhb'
 ),
 (
-    'Arta;Cultura;expoziție de artă;vernisaj artistic',
+    'Arta;Cultura;expoziție de artă;vernisaj artistic;gratuit;fizic',
 	'Gratuit',
     'Data: 23-25 mai 
 Ora începerii activităților: vineri (23): 14:00-15:00, sâmbătă (24) și duminică (25): aprox 12:00
@@ -295,7 +295,7 @@ Pentru noi, Interact Transilvania, Tête-à-Tête este mai mult decât atât. Es
     'NU'
 ),
 (
-    'educational;workshop;medicina',
+    'educational;workshop;medicina;contracost;fizic',
 	'70 lei',
     'Workshopul „Medlab – branule și injecții” oferă elevilor de liceu oportunitatea de a învăța și exersa tehnici medicale de bază, precum montarea branulelor și administrarea injecțiilor, într-un mediu controlat și sub supravegherea specialiștilor.',
     'Colegiul Național ,,Mihai Viteazul” Turda ',
@@ -317,7 +317,7 @@ Pentru noi, Interact Transilvania, Tête-à-Tête este mai mult decât atât. Es
     'NU'
 ),
 (
-    'Arta;Psihologie',
+    'Arta;Psihologie;gratuit;fizic',
 	'Gratuit',
     'Îți alegi hainele sau hainele te aleg pe tine?🧥
 
@@ -347,7 +347,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'http://bit.ly/3EFcHhb'
 ),
 (
-    'sportiv;turneu;handbal',
+    'sportiv;turneu;handbal;gratuit;fizic',
     'Gratuit',
     '🏆 Turneul Semifinal 2 Valoare Juniori 3 masculin, Grupa 3 🏐 se va organiza în Cluj-Napoca, în perioada 02–04 mai 2025.',
     'Liceul Tehnologic Ana Aslan Cluj-Napoca',
@@ -369,7 +369,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'sportiv;turneu;handbal',
+    'sportiv;turneu;handbal;gratuit;fizic',
     'Gratuit',
     '🏆 Turneul Semifinal 2 Valoare Juniori 4 masculin, Grupa 3 🏐 se va organiza în Cluj-Napoca, în perioada 10–12 mai 2025.',
     'Liceul cu Program Sportiv, Cluj-Napoca',
@@ -391,7 +391,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'educational;workshop;tehnologie;robotica',
+    'educational;workshop;tehnologie;robotica;gratuit;fizic',
     'Gratuit',
     'În acest sezon, am dat startul unei serii de workshop-uri captivante intitulată Youth Craft, dedicată inteligenței artificiale, organizate în parteneriat cu Yonder și Zbor Hub. Participanții au explorat impactul AI-ului asupra societății, etica utilizării tehnologiei, inovația digitală și trasee profesionale posibile în acest domeniu.\nEvenimentele i-au avut ca invitați speciali pe Daniel Pop, Mihai Deaconu, Robert Horodan și Paul Cîrstean – Head of Innovation la Yonder – care au adus perspective valoroase și inspiraționale din industrie.\nLe mulțumim tuturor celor care au fost alături de noi și au contribuit la conturarea unui mediu de învățare autentic, deschis și orientat spre viitor.(Destinat in general elevilor de liceu',
     'Zbor Hub Cluj-Napoca',
@@ -413,7 +413,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'concurs;voluntariat;tehnologie,STEM',
+    'concurs;voluntariat;tehnologie,STEM;gratuit;fizic',
     'Gratuit',
     'Technovation Girls este un program global care încurajează fetele să dezvolte soluții tehnologice pentru problemele din comunitatea lor. Participantele, cu vârste între 14 și 18 ani, lucrează în echipe pentru a crea aplicații mobile și planuri de afaceri, beneficiind de mentorat și resurse educaționale. Programul se desfășoară în perioada octombrie 2024 – mai 2025 și este susținut de ADFABER în România.',
     'București',
@@ -435,7 +435,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'https://technovationchallenge.org/'
 ),
 (
-    'curs;tehnologie',
+    'curs;tehnologie;gratuit;fizic',
     'Gratuit',
     'Programul „The Girls Code – Breaking Barriers” este o inițiativă dedicată sprijinirii și încurajării fetelor în tehnologie. Organizat de Asociația Adfaber cu sprijinul Google.org, programul reprezintă un pas important în înlăturarea prejudecăților și promovarea diversității în domeniul IT. Se adresează elevelor din învățământul liceal (14–18 ani), părinților și profesorilor.',
     'România',
@@ -457,7 +457,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'https://adfaber.org/en/breaking-barriers/'
 ),
 (
-    'expoziție',
+    'expoziție;gratuit;fizic',
     'Gratuit',
     'Cea de-a V-a ediție a Lunii Sculptorilor Români reunește nume importante în cadrul celui mai amplu eveniment dedicat sculpturii din România, organizat de Ateneul Național din Iași, cu sprijinul Primăriei Municipiului Iași.',
     'Iași',
@@ -479,7 +479,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'atelier',
+    'atelier;gratuit;fizic',
     'Gratuit',
     'Atelierele DICE: D(istractiv)-I(nteractiv)-C(reativ)-E(ducativ) continuă la Palatul Culturii din Iași cu o temă specifică acestei perioade, menită să readucă în atenție tradiția Mărțișorului.',
     'Iași',
@@ -501,7 +501,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'spectacol',
+    'spectacol;contracost;gratuit;fizic',
     '50 lei',
     'Spectacolul „Chirița în provinție” rămâne inepuizabila capodoperă dramatică românească, prezentată la Teatrul Național „Vasile Alecsandri” din Iași.',
     'Iași',
@@ -523,7 +523,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'festival',
+    'festival;gratuit;fizic',
     'Gratuit',
     'Ediția a 13-a a JAZZx aduce în Timișoara inspirația și talentul artiștilor români și străini, punând în valoare muzica de calitate și conexiunile autentice.',
     'Timișoara',
@@ -545,7 +545,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'festival',
+    'festival;gratuit;fizic',
     'Gratuit',
     'Ceau, Cinema! revine cu ediția a 12-a, aducând în Timișoara cele mai captivante filme europene și românești, întâlniri cu cineaști, ateliere și evenimente speciale.',
     'Timișoara',
@@ -567,7 +567,7 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'atelier',
+    'atelier;tabara;gratuit;fizic',
     'Gratuit',
     'Școala de vară „Cadre și Forme în Dansul Contemporan” conectează scena locală timișoreană cu tendințele internaționale, aducând dansul mai aproape de oameni.',
     'Timișoara',
@@ -589,14 +589,14 @@ La următorul workshop marca MindPower vorbim despre stil ca formă de autocunoa
     'NU'
 ),
 (
-    'robotica;atelier;social;educational;technologie',
+    'robotica;atelier;social;educational;technologie;gratuit;fizic',
     'Gratuit',
     '🚀 Pregătiți-vă să fiți uimiți! 🤖 Echipa de robotică Phoenix vă invită la Identicom Event pentru a vedea robotul nostru uimitor în acțiune! ⚙️ Vino să descoperi lumea fascinantă a tehnologiei, să înțelegi cum funcționează un robot de competiție și să interacționezi cu echipa noastră pasionată. Nu ratați ocazia de a vedea inovația în direct! ✨ Vă așteptăm cu entuziasm! 🎉',
     'Cluj Innovation Park',
-    '2025-07-07 10:00:00',
-    '2025-07-16 22:00:00',
+    '2025-05-20 09:00:00',
+    '2025-05-22 17:00:00',
     '2025-07-17 00:00:00',
-    'pozaT_1.jpeg',
+    'pozaU_1.png',
     15,
     'Identicom Event',
     '300085',

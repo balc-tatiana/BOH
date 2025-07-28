@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
   const handleProfileClick = () => {
@@ -30,6 +31,11 @@ const NavBar = () => {
   const handleHelpClick = () => {
     navigate('/help');
   };
+
+  const handleSearch = () => {
+    navigate(`/activities?searchTerm=${searchTerm}`);
+  };
+
   return (
     <div className='navbar'>
       <img src={logo} alt="" className='logo' />
@@ -43,17 +49,33 @@ const NavBar = () => {
             Discover
 
             <div className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
-              <a  onClick={handleMapClick} style={{ cursor: 'pointer' }}>Map</a>
-               <a onClick={handleActivitiesClick} style={{ cursor: 'pointer' }}>Activities</a>
-              <a  onClick={handleBlogClick} style={{ cursor: 'pointer' }}>Blog</a>
-              <a  onClick={handleHelpClick} style={{ cursor: 'pointer' }}>Help</a>
+              <a onClick={handleMapClick} style={{ cursor: 'pointer' }}>Map</a>
+              <a onClick={handleActivitiesClick} style={{ cursor: 'pointer' }}>Activities</a>
+              <a onClick={handleBlogClick} style={{ cursor: 'pointer' }}>Blog</a>
+              <a onClick={handleHelpClick} style={{ cursor: 'pointer' }}>Help</a>
             </div>
           </div>
         </li>
       </ul>
       <div className='search-box'>
-        <input type="text" placeholder='Search' className='search-box-input' />
-        <img src={search} style={{width:'30px', height:'30px'}} alt="" />
+        <input
+          type="text"
+          placeholder='Search'
+          className='search-box-input'
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              handleSearch();
+            }
+          }}
+        />
+        <img
+          src={search}
+          style={{ width: '30px', height: '30px' }}
+          alt=""
+          onClick={handleSearch}
+        />
       </div>
       <img
         src={profile}

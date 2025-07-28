@@ -1,5 +1,6 @@
 Aici se poate găsi ghidul aplicației noastre https://www.canva.com/design/DAGooYK-8Fs/lHiGPFHtqCqQ7othNfHzFA/edit?utm_content=DAGooYK-8Fs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-
+https://we.tl/t-2dx3xkEZPp ->video files
+https://www.canva.com/design/DAGojdmgXHs/ebkO-Ek0iRAWoLFagABaJA/edit?utm_content=DAGojdmgXHs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton -> presentation
 
 
 

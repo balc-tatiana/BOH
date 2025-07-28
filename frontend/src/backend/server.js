@@ -4,6 +4,7 @@ import session from 'express-session';
 import cors from 'cors';
 import mysql from 'mysql2';
 import dotenv from 'dotenv';
+import bcrypt from 'bcrypt';
 
 
 dotenv.config();
@@ -49,42 +50,52 @@ db.connect((err) => {
 });
 
 // Register endpoint
-app.post('/api/register', (req, res) => {
+app.post('/api/register', async (req, res) => {
   const { name, email, password } = req.body;
 
   if (!name || !email || !password) {
     return res.status(400).json({ success: false, message: 'All fields are required' });
   }
 
-  const sql = 'INSERT INTO users (name, email, password) VALUES (?, ?, ?)';
-  db.query(sql, [name, email, password], (err, result) => {
-    if (err) {
-      console.error('❌ Error inserting user:', err);
-      return res.status(500).json({ success: false, message: 'Database error or duplicate email' });
-    }
-    console.log('✅ New user registered:', result.insertId);
-    res.json({ success: true, userId: result.insertId });
-  });
+  try {
+    const hashedPassword = await bcrypt.hash(password, 10); // Hash parola
+
+    const sql = 'INSERT INTO users (name, email, password) VALUES (?, ?, ?)';
+    db.query(sql, [name, email, hashedPassword], (err, result) => {
+      if (err) {
+        console.error('❌ Error inserting user:', err);
+        return res.status(500).json({ success: false, message: 'Database error or duplicate email' });
+      }
+      console.log('✅ User registered with hashed password:', result.insertId);
+      res.json({ success: true, userId: result.insertId });
+    });
+  } catch (err) {
+    console.error('Hashing error:', err);
+    res.status(500).json({ success: false, message: 'Server error' });
+  }
 });
 
 //Login endpoint
 app.post('/api/login', (req, res) => {
   const { email, password } = req.body;
 
-  db.query(
-    'SELECT * FROM users WHERE email = ? AND password = ?',
-    [email, password],
-    (err, results) => {
-      if (err) return res.status(500).json({ message: 'DB error' });
-      if (results.length === 0) return res.status(401).json({ message: 'Invalid credentials' });
+  db.query('SELECT * FROM users WHERE email = ?', [email], async (err, results) => {
+    if (err) return res.status(500).json({ message: 'Database error' });
+    if (results.length === 0) return res.status(401).json({ message: 'User not found' });
 
-      req.session.user = results[0];
+    const user = results[0];
 
-      res.json({ message: 'Login successful', user: req.session.user });
+    // Compara parola introdusă cu hash-ul din DB
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+
+    if (!isPasswordValid) {
+      return res.status(401).json({ message: 'Invalid credentials' });
     }
-  );
-});
 
+    req.session.user = user;
+    res.json({ message: 'Login successful', user: req.session.user });
+  });
+});
 // get user info if logged in
 app.get('/api/profile', (req, res) => {
   if (!req.session || !req.session.user) {
@@ -172,8 +183,8 @@ app.get('/api/activities/:id', (req, res) => {
   });
 });
 
+
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
-
