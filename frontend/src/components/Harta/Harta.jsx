@@ -155,7 +155,9 @@ const Harta = () => {
             filteredData = filteredData.filter((item) =>
                 data.some((filteredItem) => filteredItem.id === item.id)
             );
-        }
+        
+      
+}
 
         setFilteredActivities(filteredData);
     } catch (error) {
